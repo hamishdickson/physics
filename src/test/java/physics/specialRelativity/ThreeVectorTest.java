@@ -45,4 +45,15 @@ public class ThreeVectorTest extends TestCase {
 
         assertEquals(6.0, v1.scalarProduct(v2));
     }
+
+    @Test
+    public void testCrossProductOfTwoVectors() {
+        ThreeVector v1 = new ThreeVector(1.0, 2.0, 3.0);
+        ThreeVector v2 = new ThreeVector(4.0, 5.0, 6.0);
+
+        ThreeVector v3 = new ThreeVector(-3.0, 6.0, -3.0);
+
+        assertEquals(v3.toString(), v1.crossProduct(v2).toString());
+
+    }
 }

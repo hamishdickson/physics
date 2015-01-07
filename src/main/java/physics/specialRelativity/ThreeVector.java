@@ -99,4 +99,11 @@ public class ThreeVector {
                 this.zCoord * threeVector.getzCoord();
         return out;
     }
+
+    public ThreeVector crossProduct(ThreeVector v) {
+        ThreeVector threeVector = new ThreeVector(this.yCoord * v.getzCoord() - this.zCoord * v.getyCoord(),
+                this.zCoord * v.getxCoord() - this.xCoord * v.getzCoord(),
+                this.xCoord * v.getyCoord() - this.yCoord * v.getxCoord());
+        return threeVector;
+    }
 }
