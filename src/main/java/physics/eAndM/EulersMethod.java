@@ -10,4 +10,8 @@ package physics.eAndM;
  * where basically everything is a vector
  */
 public class EulersMethod {
+    public static void main(String[] args) {
+        
+        
+    }
 }
