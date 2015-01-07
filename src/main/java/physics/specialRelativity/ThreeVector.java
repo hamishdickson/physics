@@ -92,4 +92,11 @@ public class ThreeVector {
     public String toString() {
         return "" + xCoord + "\t" + yCoord + "\t" + zCoord;
     }
+
+    public double scalarProduct(ThreeVector threeVector) {
+        double out = this.xCoord * threeVector.getxCoord() +
+                this.yCoord * threeVector.getyCoord() +
+                this.zCoord * threeVector.getzCoord();
+        return out;
+    }
 }

@@ -37,4 +37,12 @@ public class ThreeVectorTest extends TestCase {
 
         assertEquals(v3.toString(), v1.addVector(v2).toString());
     }
+    
+    @Test
+    public void testScalarProductOfTwoVectors() {
+        ThreeVector v1 = new ThreeVector(1.0, 1.0, 1.0);
+        ThreeVector v2 = new ThreeVector(2.0, 2.0, 2.0);
+
+        assertEquals(6.0, v1.scalarProduct(v2));
+    }
 }
