@@ -1,5 +1,5 @@
-A redo of some simple physics stuff I did at uni
+Some physics stuff done at uni
 
-except
-1) we used c++ at uni (not java), where you can do cool (read dangerous) things like overloading operators
-2) this has been done with TDD
+this is a redo of the c++ course taught at imperial college to 2nd years (at least it was "way back when") done in java
+
+as this is in java rather than c++ some parts don't make sense (like overloading operators) - they haven't been done here
