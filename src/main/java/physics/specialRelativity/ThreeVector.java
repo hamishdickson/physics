@@ -25,25 +25,20 @@ public class ThreeVector {
     /**
      * Creates the three vector using spherical coords - throws an exception if type isn't
      * d = degrees or r = radians
-     * @param r
-     * @param theta
-     * @param phi
-     * @param type
      */
     public ThreeVector(double r, double theta, double phi, char type) throws IllegalArgumentException {
-        if (type != 'd' && type != 'r') {
-            throw new IllegalArgumentException();
+        if (type == 'r') {
+            this.xCoord = r * sin(theta) * cos(phi);
+            this.yCoord = r * sin(theta) * sin(phi);
+            this.zCoord = r * cos(theta);
+        } else if (type == 'd') {
+            this.xCoord = r * sin(theta * PI / 180) * cos(phi * PI / 180);
+            this.yCoord = r * sin(theta * PI / 180) * sin(phi * PI / 180);
+            this.zCoord = r * cos(theta * PI / 180);
         } else {
-            if (type == 'r') {
-                this.xCoord = r * sin(theta) * cos(phi);
-                this.yCoord = r * sin(theta) * sin(phi);
-                this.zCoord = r * cos(theta);
-            } else { // type = d
-                this.xCoord = r * sin(theta * PI / 180) * cos(phi * PI / 180);
-                this.yCoord = r * sin(theta * PI / 180) * sin(phi * PI / 180);
-                this.zCoord = r * cos(theta * PI / 180);
-            }
+            throw new IllegalArgumentException();
         }
+
     }
 
     public double square() {
@@ -87,7 +82,10 @@ public class ThreeVector {
     }
 
     public ThreeVector addVector(ThreeVector v) {
-        return new ThreeVector(this.xCoord + v.getxCoord(), this.yCoord + v.getyCoord(), this.zCoord + v.getzCoord());
+        ThreeVector threeVector = new ThreeVector(this.xCoord + v.getxCoord(), 
+                                                  this.yCoord + v.getyCoord(), 
+                                                  this.zCoord + v.getzCoord());
+        return threeVector;
     }
 
     @Override
