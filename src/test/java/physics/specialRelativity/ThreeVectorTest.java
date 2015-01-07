@@ -56,4 +56,23 @@ public class ThreeVectorTest extends TestCase {
         assertEquals(v3.toString(), v1.crossProduct(v2).toString());
 
     }
+
+    /**
+     * A.(A^B) should be zero 
+     *  
+     */
+    @Test
+    public void testADotACrossBShouldBeZero() {
+        ThreeVector v1 = new ThreeVector(-1.3054, 7.4033, 2.7362);
+        ThreeVector v2 = new ThreeVector(1.0, 2.0, 3.0);
+        
+        ThreeVector v3 = v1.crossProduct(v2);
+        
+        System.out.println(v3.toString());
+        
+        double hopefullyZero = v1.scalarProduct(v1.crossProduct(v2));
+       
+        // set a boundry on the assertion
+        assertEquals(0.0, hopefullyZero, 0.01);
+    }
 }
