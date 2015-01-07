@@ -1,4 +1,4 @@
-package physics.specialRelativity;
+package physics.spaceTime;
 
 /**
  * Created by hamishdickson on 07/01/15.

@@ -1,4 +1,4 @@
-package physics.specialRelativity;
+package physics.spaceTime;
 
 import junit.framework.TestCase;
 import org.junit.Test;

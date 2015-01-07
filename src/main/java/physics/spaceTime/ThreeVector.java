@@ -1,4 +1,4 @@
-package physics.specialRelativity;
+package physics.spaceTime;
 
 import static java.lang.Math.*;
 
