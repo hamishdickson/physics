@@ -106,4 +106,10 @@ public class ThreeVector {
                 this.xCoord * v.getyCoord() - this.yCoord * v.getxCoord());
         return threeVector;
     }
+
+    public ThreeVector multiplyByScalar(double num) {
+        return new ThreeVector(num * this.xCoord,
+                num * this.yCoord,
+                num * this.zCoord);
+    }
 }
