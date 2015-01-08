@@ -15,7 +15,7 @@ public class EulersMethod {
     private static final double DELTA_T = 0.01;
 
     public ThreeVector getVectorAfterDuration(ThreeVector vec, ThreeVector bField, double duration) {
-        System.out.println("" + vec.getxCoord() + "\t" + vec.getyCoord() + "\t" + vec.getzCoord());
+        System.out.println("" + duration + "\t"+ vec.getxCoord() + "\t" + vec.getyCoord() + "\t" + vec.getzCoord());
         if (duration < 0 ) return vec;
         return getVectorAfterDuration( vec.addVector(vec.crossProduct(bField)).multiplyByScalar(DELTA_T),
                 bField, duration - DELTA_T);
