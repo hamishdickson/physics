@@ -15,4 +15,8 @@ public class EulersMethodTest extends TestCase {
         eulersMethod.getVectorAfterDuration(v, b, 20.0);
     }
 
+
+    /**
+     * todo know analytic solution - compare each component and magnitudes
+     */
 }
