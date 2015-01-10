@@ -6,6 +6,8 @@ import physics.spaceTime.FourVector;
  * Created by hamishdickson on 10/01/15.
  * 
  * This is badly written - I'm not actually sure what the form is even asking for
+ * 
+ * todo think about what would be useful for physics in general
  */
 public class Particle extends FourVector {
     private double mass;
@@ -18,6 +20,24 @@ public class Particle extends FourVector {
         super(tCoord, xCoord, yCoord, zCoord);
         this.mass = mass;
     }
+
+    public double getMass() {
+        return mass;
+    }
     
+    public double getEnergy() {
+        return 0.0;
+    }
     
+    public double getKineticEnergy() {
+        return 0.0;
+    }
+    
+    public double getMomentum() {
+        return 0.0;
+    }
+    
+    public double getvelocity() {
+        return 0.0;
+    }
 }
