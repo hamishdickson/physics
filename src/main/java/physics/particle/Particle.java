@@ -5,39 +5,34 @@ import physics.spaceTime.FourVector;
 /**
  * Created by hamishdickson on 10/01/15.
  * 
- * This is badly written - I'm not actually sure what the form is even asking for
+ * This section of the notes is so badly written!
  * 
- * todo think about what would be useful for physics in general
+ * todo as it's unclear what's wanted here, think about what would be useful for physics in general
  */
-public class Particle extends FourVector {
+public class Particle {
     private double mass;
-
-    public Particle(double mass) {
-        this.mass = mass;
-    }
-
-    public Particle(double tCoord, double xCoord, double yCoord, double zCoord, double mass) {
-        super(tCoord, xCoord, yCoord, zCoord);
-        this.mass = mass;
-    }
+    private FourVector energy;
+    private FourVector kineticEnergy;
+    private FourVector momentum;
+    private FourVector velocity;
 
     public double getMass() {
         return mass;
     }
-    
-    public double getEnergy() {
-        return 0.0;
+
+    public FourVector getEnergy() {
+        return energy;
     }
-    
-    public double getKineticEnergy() {
-        return 0.0;
+
+    public FourVector getKineticEnergy() {
+        return kineticEnergy;
     }
-    
-    public double getMomentum() {
-        return 0.0;
+
+    public FourVector getMomentum() {
+        return momentum;
     }
-    
-    public double getvelocity() {
-        return 0.0;
+
+    public FourVector getVelocity() {
+        return velocity;
     }
 }
