@@ -3,6 +3,7 @@ package physics.spaceTime;
 /**
  * Created by hamishdickson on 09/01/15.
  * 
+ * don't judge me for this - I'm aware it's a bit stupid!
  */
 public class FourVector extends ThreeVector {
     private double tCoord;
@@ -20,5 +21,10 @@ public class FourVector extends ThreeVector {
     public FourVector(double tCoord, ThreeVector threeVector) {
         super(threeVector.getxCoord(), threeVector.getyCoord(), threeVector.getzCoord());
         this.tCoord = tCoord;
+    }
+
+    @Override
+    public String toString() {
+        return "" + tCoord + "\t" + this.getxCoord() + "\t" + this.getyCoord() + "\t" + this.getzCoord();
     }
 }
