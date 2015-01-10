@@ -32,4 +32,12 @@ public class FourVector extends ThreeVector {
     public double square() {
         return tCoord * tCoord - super.square() ;
     }
+
+    public double gettCoord() {
+        return tCoord;
+    }
+
+    public void settCoord(double tCoord) {
+        this.tCoord = tCoord;
+    }
 }
