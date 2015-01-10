@@ -16,6 +16,14 @@ public class Particle {
     private FourVector momentum;
     private FourVector velocity;
 
+    public Particle(double mass, FourVector energy, FourVector kineticEnergy, FourVector momentum, FourVector velocity) {
+        this.mass = mass;
+        this.energy = energy;
+        this.kineticEnergy = kineticEnergy;
+        this.momentum = momentum;
+        this.velocity = velocity;
+    }
+
     public double getMass() {
         return mass;
     }
