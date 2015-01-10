@@ -27,4 +27,9 @@ public class FourVector extends ThreeVector {
     public String toString() {
         return "" + tCoord + "\t" + this.getxCoord() + "\t" + this.getyCoord() + "\t" + this.getzCoord();
     }
+
+    @Override
+    public double square() {
+        return tCoord * tCoord - super.square() ;
+    }
 }

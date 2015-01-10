@@ -14,4 +14,15 @@ public class FourVectorTest extends TestCase {
         assertEquals("0.0\t0.0\t0.0\t0.0", fourVector1.toString());
     }
 
+    /**
+     * assume we are in mink space 
+     * ie square = t^2 - r^2 
+     */
+    @Test
+    public void testThatSquareObeysMinkowskiSpace() {
+        FourVector fourVector = new FourVector(5.0, 1.0, 2.0, 3.0);
+        
+        assertEquals(11.0, fourVector.square(), 0.01);
+    }
+
 }
