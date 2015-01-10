@@ -25,4 +25,18 @@ public class FourVectorTest extends TestCase {
         assertEquals(11.0, fourVector.square(), 0.01);
     }
 
+    /**
+     * Note: I've read the notes for this about 20 times and I still don't understand what it's asking for - from the
+     * context, it sounds like it wants you to boost a 4vec by some given 3vec in the z dir only.
+     */
+    @Test
+    public void testBoost() {
+        ThreeVector newFrame = new ThreeVector(0.0, 0.0, 0.7);
+        FourVector fourVector = new FourVector(4.0, 5.0, 6.0, 7.0);
+        
+        FourVector newFourVector = fourVector.boostInZDirn(newFrame);
+        
+        assertEquals("5.881176352917642\t5.0\t6.0\t-1.260252075625208", newFourVector.toString());
+    }
+
 }
